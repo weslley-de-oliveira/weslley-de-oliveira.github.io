@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Avaliação de Produtos · Weslley de Oliveira Machado</title>
+    <meta
+      name="description"
+      content="Catálogo com avaliações e resumo por IA: Next.js 15, tRPC, Supabase, Mastra e n8n, com arquitetura em camadas e testes."
+    />
+    <meta name="color-scheme" content="dark light" />
+    <meta name="theme-color" content="#0b0b0c" />
+    <meta property="og:title" content="Avaliação de Produtos · Weslley de Oliveira Machado" />
+    <meta property="og:image" content="https://weslley-de-oliveira.github.io/assets/img/ap-catalogo.png" />
+    <link rel="canonical" href="https://weslley-de-oliveira.github.io/projetos/avaliacao-produtos.html" />
+    <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+    />
+    <link rel="stylesheet" href="../assets/styles.css?v=3" />
+
+    <script>
+      try {
+        document.documentElement.classList.add('js');
+        if (localStorage.getItem('tema') === 'light') document.documentElement.dataset.theme = 'light';
+      } catch {}
+    </script>
+    <script src="../assets/main.js?v=3" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+    <canvas class="stars" aria-hidden="true"></canvas>
+    <div class="scroll-progress" aria-hidden="true"><span></span></div>
+
+    <header class="topbar">
+      <a class="brand" href="../" aria-label="Voltar ao início">
+        <span class="brand-mark" aria-hidden="true">W</span>
+      </a>
+      <div class="topbar-actions">
+        <button class="theme-toggle" type="button" aria-label="Usar o tema claro">
+          <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="4" />
+            <path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" />
+          </svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" />
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <main id="conteudo" class="page">
+      <div class="container">
+        <a class="back-link" href="../#projetos">← Voltar aos projetos</a>
+
+        <h1 class="display page-title">Avaliação de <span class="accent">Produtos</span></h1>
+        <p class="page-lead">
+          Catálogo com avaliações de 1 a 5, nota geral e distribuição por nota. Um agente de IA resume os comentários de
+          cada produto, e um workflow do n8n importa produtos de uma loja externa pela API.
+        </p>
+
+        <dl class="page-meta">
+          <div>
+            <dt>Front-end</dt>
+            <dd>Next.js 15, React 19, React Query, Tailwind CSS, shadcn/ui</dd>
+          </div>
+          <div>
+            <dt>Back-end e IA</dt>
+            <dd>tRPC 11, Zod, Supabase (PostgreSQL e Storage), Mastra com Gemini, n8n</dd>
+          </div>
+          <div>
+            <dt>Links</dt>
+            <dd>
+              <a href="https://avaliacao-produtos-iota.vercel.app" rel="noopener">Site</a> ·
+              <a href="https://github.com/weslley-de-oliveira/avaliacao-produtos" rel="noopener">Código</a>
+            </dd>
+          </div>
+        </dl>
+
+        <figure class="shot shot-hero page-section">
+          <img
+            src="../assets/img/ap-catalogo.png"
+            width="1440"
+            height="900"
+            alt="Página inicial da Avaliação de Produtos com destaque e catálogo"
+          />
+        </figure>
+
+        <section class="page-section" aria-labelledby="destaques">
+          <h2 class="section-label" id="destaques"><span class="asterisk" aria-hidden="true">✱</span>Destaques</h2>
+          <ul class="features">
+            <li class="reveal">
+              <h3 class="display">Resumo por IA resiliente</h3>
+              <p>
+                O resumo fica em cache e só é refeito quando chegam avaliações novas. Sem a IA, a página mostra o último
+                resumo salvo; depois de uma falha do modelo, o produto espera 5 minutos antes de tentar de novo.
+              </p>
+            </li>
+            <li class="reveal">
+              <h3 class="display">Contra injeção de prompt</h3>
+              <p>
+                Os comentários entram como dados, em JSON com <code>&lt;</code> e <code>&gt;</code> escapados, num bloco
+                delimitado, e o agente é instruído a não seguir instruções escritas neles. Há testes para isso.
+              </p>
+            </li>
+            <li class="reveal">
+              <h3 class="display">Camadas e injeção de dependência</h3>
+              <p>
+                REST e tRPC chamam o mesmo procedimento; os serviços dependem de interfaces de repositório e são testados com
+                repositórios em memória. Um caminho único de erros: domínio, tRPC, HTTP.
+              </p>
+            </li>
+            <li class="reveal">
+              <h3 class="display">Detalhes que contam</h3>
+              <p>
+                Upload validado pelos bytes do arquivo, não pelo <code>Content-Type</code>. Paginação por keyset com cursor
+                validado. Sessão assinada com HMAC e comparação em tempo constante.
+              </p>
+            </li>
+          </ul>
+        </section>
+
+        <div class="gallery gallery-aside page-section">
+          <figure class="shot">
+            <img
+              src="../assets/img/ap-produto.png"
+              width="1440"
+              height="900"
+              loading="lazy"
+              alt="Página de um produto com imagem, descrição, nota geral e chamada para avaliar"
+            />
+            <figcaption>Página do produto.</figcaption>
+          </figure>
+          <figure class="shot">
+            <img
+              src="../assets/img/ap-resumo-ia.png"
+              width="704"
+              height="1317"
+              loading="lazy"
+              alt="Nota geral 4,0 com a distribuição das notas e o resumo das avaliações gerado por IA"
+            />
+            <figcaption>Nota e resumo por IA.</figcaption>
+          </figure>
+        </div>
+
+        <a class="next-project" href="gestao-financeira.html">
+          <small>Próximo projeto</small>
+          <span class="display">Gestão Financeira →</span>
+        </a>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p class="footer-credit">
+          Design e código por Weslley de Oliveira Machado · <span data-year>2026</span><br />
+          Layout inspirado em <a href="https://www.tajmirul.site/" rel="noopener">tajmirul.site</a>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
