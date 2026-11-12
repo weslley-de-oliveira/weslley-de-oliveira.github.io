@@ -400,8 +400,38 @@ code {
   color: var(--text-strong);
 }
 
+.hero-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 28px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.hero-stack li {
+  display: grid;
+  place-items: center;
+  width: 50px;
+  height: 50px;
+  border: 1px solid var(--line);
+  background: var(--bg-raise);
+  transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+
+.hero-stack li:hover {
+  border-color: var(--accent);
+  box-shadow: 0 0 20px -6px var(--accent-glow);
+  transform: translateY(-3px);
+}
+
+.hero-stack img {
+  width: 28px;
+  height: 28px;
+}
+
 .hero-lead {
-  margin-top: 28px;
+  margin-top: 24px;
   max-width: 34em;
   font-size: clamp(17px, 1.6vw, 19px);
   color: var(--muted);
