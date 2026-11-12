@@ -1,0 +1,522 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Weslley de Oliveira Machado · Desenvolvedor Front-end</title>
+    <meta
+      name="description"
+      content="Desenvolvedor Front-end com mais de 4 anos de experiência em Angular, TypeScript e Node.js, ex-líder técnico de front-end e pós-graduando em Engenharia de IA Aplicada."
+    />
+    <meta name="author" content="Weslley de Oliveira Machado" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#f6f5f1" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0e0f12" media="(prefers-color-scheme: dark)" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:title" content="Weslley de Oliveira Machado · Desenvolvedor Front-end" />
+    <meta
+      property="og:description"
+      content="Angular, TypeScript e Node.js. Projetos publicados, com testes, CI e decisões de arquitetura documentadas."
+    />
+    <meta property="og:url" content="https://weslley-de-oliveira.github.io/" />
+    <meta property="og:image" content="https://weslley-de-oliveira.github.io/assets/img/gf-dashboard.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="canonical" href="https://weslley-de-oliveira.github.io/" />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+    />
+    <link rel="stylesheet" href="assets/styles.css" />
+
+    <script>
+      try {
+        const saved = localStorage.getItem('theme');
+        if (saved === 'light' || saved === 'dark') document.documentElement.dataset.theme = saved;
+      } catch {}
+    </script>
+    <script src="assets/main.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="#topo" aria-label="Weslley de Oliveira Machado, início">
+          <span class="brand-mark" aria-hidden="true">W</span>
+          <span class="brand-name">Weslley Machado</span>
+        </a>
+        <nav aria-label="Seções">
+          <ul class="nav-list">
+            <li><a href="#projetos">Projetos</a></li>
+            <li><a href="#como-trabalho">Como trabalho</a></li>
+            <li><a href="#experiencia">Experiência</a></li>
+            <li><a href="#contato">Contato</a></li>
+          </ul>
+        </nav>
+        <button class="theme-toggle" type="button" aria-label="Alternar tema claro e escuro">
+          <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="4" />
+            <path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" />
+          </svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" />
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <main id="conteudo">
+      <section class="hero" id="topo">
+        <div class="container">
+          <p class="eyebrow">João Pessoa, Paraíba · Brasil</p>
+          <h1 class="hero-title">
+            Weslley de Oliveira Machado
+            <span class="hero-role">Desenvolvedor <span class="nowrap">Front-end</span> que <em>cuida do que vem depois do CRUD</em>.</span>
+          </h1>
+          <p class="hero-lead">
+            Mais de 4 anos no ecossistema JavaScript e TypeScript, com foco em Angular (da v5 à v22). Fui líder
+            técnico de front-end por 1 ano e 6 meses e hoje curso a pós-graduação em Engenharia de IA Aplicada.
+            Gosto de regras de negócio difíceis, arquitetura clara e software que se prova com testes.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#projetos">Ver projetos</a>
+            <a class="button" href="https://www.linkedin.com/in/weslley-de-oliveira-machado-09676b175" rel="noopener">LinkedIn</a>
+            <a class="button" href="https://github.com/weslley-de-oliveira" rel="noopener">GitHub</a>
+          </div>
+
+          <dl class="stats">
+            <div class="stat">
+              <dt>Experiência</dt>
+              <dd><span class="stat-value">4+</span> anos</dd>
+            </div>
+            <div class="stat">
+              <dt>Liderança técnica</dt>
+              <dd><span class="stat-value">1,5</span> ano liderando o front-end</dd>
+            </div>
+            <div class="stat">
+              <dt>Angular</dt>
+              <dd><span class="stat-value">v5→v22</span></dd>
+            </div>
+            <div class="stat">
+              <dt>Testes no portfólio</dt>
+              <dd><span class="stat-value">1.600+</span> automatizados</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="section" id="projetos" aria-labelledby="projetos-titulo">
+        <div class="container">
+          <header class="section-header">
+            <p class="section-index">01</p>
+            <h2 id="projetos-titulo">Projetos</h2>
+            <p class="section-lead">
+              Publicados, com código aberto e as decisões registradas. Use apenas dados fictícios nas demos.
+            </p>
+          </header>
+
+          <article class="project" aria-labelledby="gf-titulo">
+            <div class="project-head">
+              <p class="project-kind">Full-stack · Front + API</p>
+              <h3 id="gf-titulo">Gestão Financeira</h3>
+              <p class="project-summary">
+                App de finanças pessoais feito de ponta a ponta: front em Angular 22 e API própria em Node, com Fastify e
+                PostgreSQL. Contas, transações, cartões com fatura, orçamentos, metas e dashboard. O interessante são as
+                regras difíceis e o que costuma ficar de fora de projeto de portfólio.
+              </p>
+              <ul class="tags" aria-label="Tecnologias">
+                <li>Angular 22</li>
+                <li>Signals</li>
+                <li>Signal Forms</li>
+                <li>Angular Material</li>
+                <li>Node 26</li>
+                <li>Fastify 5</li>
+                <li>Zod 4</li>
+                <li>Drizzle</li>
+                <li>PostgreSQL</li>
+                <li>Vitest</li>
+                <li>Playwright</li>
+              </ul>
+              <div class="project-links">
+                <a class="button button-primary" href="https://gestao-financeira-tau-five.vercel.app" rel="noopener">Abrir a demo</a>
+                <a class="button" href="https://github.com/weslley-de-oliveira/gestao-financeira" rel="noopener">Código do front</a>
+                <a class="button" href="https://github.com/weslley-de-oliveira/gestao-financeira-api" rel="noopener">Código da API</a>
+              </div>
+              <p class="note">
+                A demo tem uma conta de demonstração na tela de login. A API roda no plano gratuito do Render e pode levar
+                até um minuto para acordar.
+              </p>
+            </div>
+
+            <figure class="shot shot-main">
+              <img
+                class="only-light"
+                src="assets/img/gf-dashboard.png"
+                width="1440"
+                height="900"
+                alt="Dashboard da Gestão Financeira com saldo, receitas, despesas, gráfico mensal e transações recentes"
+              />
+              <img
+                class="only-dark"
+                src="assets/img/gf-dashboard-escuro.png"
+                width="1440"
+                height="900"
+                alt="Dashboard da Gestão Financeira no tema escuro"
+              />
+            </figure>
+
+            <div class="highlights">
+              <div class="highlight">
+                <h4>Faturas calculadas, não gravadas</h4>
+                <p>
+                  O saldo de uma fatura passa para a seguinte, com pagamento parcial e travas em cadeia: uma compra antiga não
+                  muda fatura já paga. Compras parceladas com antecipação e cancelamento, e estornos.
+                </p>
+              </div>
+              <div class="highlight">
+                <h4>Concorrência e idempotência</h4>
+                <p>
+                  <code>ETag</code> e <code>If-Match</code> recusam edições sobre dados desatualizados (412).
+                  <code>Idempotency-Key</code> e trava de linha impedem pagamento em dobro.
+                </p>
+              </div>
+              <div class="highlight">
+                <h4>Segurança de verdade</h4>
+                <p>
+                  Sessão em cookie <code>__Host-</code> com Argon2id, revogação imediata, verificação de origem, rate limit,
+                  CSP aplicada em produção e teste de isolamento que chama toda rota com o id de outro usuário.
+                </p>
+              </div>
+              <div class="highlight">
+                <h4>Observabilidade</h4>
+                <p>
+                  Cada requisição leva um <code>X-Request-Id</code>. A falha mostra um código na tela, que leva à linha do log
+                  na API; erros do navegador também são relatados à API.
+                </p>
+              </div>
+            </div>
+
+            <dl class="metrics">
+              <div><dt>Testes da API</dt><dd>1.037, contra Postgres real</dd></div>
+              <div><dt>Cobertura da API</dt><dd>97% das linhas</dd></div>
+              <div><dt>Testes do front</dt><dd>600 unitários e 57 E2E</dd></div>
+              <div><dt>Acessibilidade</dt><dd>axe nos temas claro e escuro</dd></div>
+              <div><dt>Decisões</dt><dd>16 ADRs nos dois repositórios</dd></div>
+              <div><dt>Entrega</dt><dd>18 etapas, PRs com CI obrigatório</dd></div>
+            </dl>
+
+            <div class="gallery">
+              <figure class="shot">
+                <img
+                  src="assets/img/gf-fatura.png"
+                  width="1440"
+                  height="900"
+                  loading="lazy"
+                  alt="Fatura de cartão com saldo anterior e pagamento parcial"
+                />
+                <figcaption>Fatura com saldo anterior e pagamento parcial.</figcaption>
+              </figure>
+              <figure class="shot">
+                <img
+                  src="assets/img/gf-transacoes.png"
+                  width="1440"
+                  height="900"
+                  loading="lazy"
+                  alt="Lista de transações com filtros, busca e paginação"
+                />
+                <figcaption>Transações com filtros na URL e paginação por cursor.</figcaption>
+              </figure>
+              <figure class="shot shot-phone">
+                <img
+                  src="assets/img/gf-celular.png"
+                  width="824"
+                  height="1678"
+                  loading="lazy"
+                  alt="Dashboard no celular"
+                />
+                <figcaption>Layout responsivo.</figcaption>
+              </figure>
+            </div>
+          </article>
+
+          <article class="project" aria-labelledby="ap-titulo">
+            <div class="project-head">
+              <p class="project-kind">Full-stack · IA aplicada</p>
+              <h3 id="ap-titulo">Avaliação de Produtos</h3>
+              <p class="project-summary">
+                Catálogo com avaliações de 1 a 5, nota geral e distribuição por nota. Um agente de IA resume os comentários
+                de cada produto, e um workflow do n8n importa produtos de uma loja externa pela API.
+              </p>
+              <ul class="tags" aria-label="Tecnologias">
+                <li>Next.js 15</li>
+                <li>React 19</li>
+                <li>tRPC 11</li>
+                <li>React Query</li>
+                <li>Supabase</li>
+                <li>Mastra</li>
+                <li>Gemini</li>
+                <li>n8n</li>
+                <li>Tailwind</li>
+                <li>shadcn/ui</li>
+                <li>Vitest</li>
+              </ul>
+              <div class="project-links">
+                <a class="button button-primary" href="https://avaliacao-produtos-iota.vercel.app" rel="noopener">Abrir o site</a>
+                <a class="button" href="https://github.com/weslley-de-oliveira/avaliacao-produtos" rel="noopener">Código</a>
+              </div>
+            </div>
+
+            <figure class="shot shot-main">
+              <img
+                src="assets/img/ap-catalogo.png"
+                width="1440"
+                height="900"
+                loading="lazy"
+                alt="Página inicial da Avaliação de Produtos com destaque e catálogo"
+              />
+            </figure>
+
+            <div class="highlights">
+              <div class="highlight">
+                <h4>Resumo por IA que não quebra a página</h4>
+                <p>
+                  O resumo fica em cache e só é refeito quando chegam avaliações novas. Sem a IA, a página mostra o último
+                  resumo salvo; depois de uma falha do modelo, o produto espera 5 minutos antes de tentar de novo.
+                </p>
+              </div>
+              <div class="highlight">
+                <h4>Proteção contra injeção de prompt</h4>
+                <p>
+                  Os comentários entram como dados, em JSON com <code>&lt;</code> e <code>&gt;</code> escapados, num bloco
+                  delimitado, e o agente é instruído a não seguir instruções escritas neles. Há testes para isso.
+                </p>
+              </div>
+              <div class="highlight">
+                <h4>Camadas com injeção de dependência</h4>
+                <p>
+                  REST e tRPC chamam o mesmo procedimento; os serviços dependem de interfaces de repositório e são testados
+                  com repositórios em memória. Um caminho único de erros: domínio, tRPC, HTTP.
+                </p>
+              </div>
+              <div class="highlight">
+                <h4>Detalhes que contam</h4>
+                <p>
+                  Upload validado pelos bytes do arquivo, não pelo <code>Content-Type</code>. Paginação por keyset com cursor
+                  validado. Sessão assinada com HMAC e comparação em tempo constante.
+                </p>
+              </div>
+            </div>
+
+            <div class="gallery gallery-pair">
+              <figure class="shot">
+                <img
+                  src="assets/img/ap-produto.png"
+                  width="1440"
+                  height="900"
+                  loading="lazy"
+                  alt="Página de um produto com imagem, descrição, nota geral e chamada para avaliar"
+                />
+                <figcaption>Página do produto.</figcaption>
+              </figure>
+              <figure class="shot">
+                <img
+                  src="assets/img/ap-resumo-ia.png"
+                  width="704"
+                  height="1317"
+                  loading="lazy"
+                  alt="Nota geral 4,0 com a distribuição das notas e o resumo das avaliações gerado por IA"
+                />
+                <figcaption>Nota geral e resumo gerado por IA.</figcaption>
+              </figure>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="como-trabalho" aria-labelledby="como-trabalho-titulo">
+        <div class="container">
+          <header class="section-header">
+            <p class="section-index">02</p>
+            <h2 id="como-trabalho-titulo">Como eu trabalho</h2>
+            <p class="section-lead">O mesmo cuidado que levei para a liderança técnica, aplicado nos meus projetos.</p>
+          </header>
+          <ol class="principles">
+            <li>
+              <h3>Plano antes do código</h3>
+              <p>Especificação escrita, etapas pequenas e critérios de pronto. Cada etapa vira uma branch e um PR.</p>
+            </li>
+            <li>
+              <h3>Decisões registradas</h3>
+              <p>ADRs com o contexto, a escolha e o trade-off. Quem chega depois entende o porquê, não só o quê.</p>
+            </li>
+            <li>
+              <h3>Prova automatizada</h3>
+              <p>Testes contra banco real, E2E com acessibilidade, cobertura e lint no CI obrigatório da <code>main</code>.</p>
+            </li>
+            <li>
+              <h3>Conferência em produção</h3>
+              <p>Depois de cada deploy, um roteiro pelo caminho real. Foi assim que achei bugs que nenhum teste pegaria.</p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="section" id="experiencia" aria-labelledby="experiencia-titulo">
+        <div class="container">
+          <header class="section-header">
+            <p class="section-index">03</p>
+            <h2 id="experiencia-titulo">Experiência</h2>
+          </header>
+
+          <ol class="timeline">
+            <li class="timeline-item">
+              <div class="timeline-when">mai 2025 – out 2026</div>
+              <div class="timeline-body">
+                <h3>Líder Técnico de Front-end <span class="at">· Vox Tecnologia</span></h3>
+                <p>
+                  Conduzi decisões arquiteturais, defini padrões de desenvolvimento e orientei tecnicamente a equipe,
+                  contribuindo para a organização e a qualidade das entregas em Scrum.
+                </p>
+              </div>
+            </li>
+            <li class="timeline-item">
+              <div class="timeline-when">jun 2022 – jun 2025</div>
+              <div class="timeline-body">
+                <h3>Desenvolvedor Front-end Pleno <span class="at">· Vox Tecnologia</span></h3>
+                <p>
+                  Desenvolvimento e evolução de aplicações web em Angular, componentes reutilizáveis, integração com APIs
+                  REST e testes unitários com Jasmine e Karma, com foco em qualidade, performance e experiência do usuário.
+                </p>
+              </div>
+            </li>
+            <li class="timeline-item">
+              <div class="timeline-when">mar 2020 – dez 2020</div>
+              <div class="timeline-body">
+                <h3>Estagiário de Desenvolvimento Web <span class="at">· Fábrica de Software UBTech Office/Unipê</span></h3>
+              </div>
+            </li>
+          </ol>
+
+          <div class="split">
+            <div>
+              <h3 class="subhead">Formação</h3>
+              <ul class="plain-list">
+                <li>
+                  <strong>Pós-graduação em Engenharia de IA Aplicada</strong>
+                  <span>Coders University · out 2026 – abr 2027 (em andamento)</span>
+                </li>
+                <li>
+                  <strong>Graduação em Gestão da Tecnologia da Informação</strong>
+                  <span>Centro Universitário de João Pessoa (Unipê) · 2018 – 2020</span>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="subhead">Certificações em IA</h3>
+              <ul class="plain-list compact">
+                <li>Gerador de Relatórios Financeiros com IA</li>
+                <li>Pipeline de Qualificação de Leads com IA</li>
+                <li>Análise de Comportamento de LLM para Atendimento Corporativo</li>
+                <li>Framework de Testes para Prompts de IA</li>
+                <li>Avaliação de Adoção de IA para Empresas</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="competencias" aria-labelledby="competencias-titulo">
+        <div class="container">
+          <header class="section-header">
+            <p class="section-index">04</p>
+            <h2 id="competencias-titulo">Competências</h2>
+          </header>
+          <div class="skills">
+            <div class="skill-group">
+              <h3>Front-end</h3>
+              <ul class="tags">
+                <li>Angular</li>
+                <li>TypeScript</li>
+                <li>JavaScript</li>
+                <li>RxJS</li>
+                <li>Signals</li>
+                <li>Angular Material</li>
+                <li>Ionic</li>
+                <li>React</li>
+                <li>Next.js</li>
+                <li>HTML5</li>
+                <li>CSS3 e SCSS</li>
+                <li>Tailwind</li>
+              </ul>
+            </div>
+            <div class="skill-group">
+              <h3>Back-end e dados</h3>
+              <ul class="tags">
+                <li>Node.js</li>
+                <li>Fastify</li>
+                <li>APIs REST</li>
+                <li>API First</li>
+                <li>OpenAPI</li>
+                <li>tRPC</li>
+                <li>PostgreSQL</li>
+                <li>Drizzle</li>
+                <li>Supabase</li>
+                <li>Docker</li>
+              </ul>
+            </div>
+            <div class="skill-group">
+              <h3>Qualidade</h3>
+              <ul class="tags">
+                <li>Jasmine e Karma</li>
+                <li>Vitest</li>
+                <li>Playwright</li>
+                <li>Testcontainers</li>
+                <li>axe-core</li>
+                <li>GitHub Actions</li>
+                <li>ESLint e Prettier</li>
+              </ul>
+            </div>
+            <div class="skill-group">
+              <h3>IA e liderança</h3>
+              <ul class="tags">
+                <li>Agentes com Mastra</li>
+                <li>Integração de LLMs</li>
+                <li>Testes de prompts</li>
+                <li>n8n</li>
+                <li>Arquitetura de software</li>
+                <li>Liderança técnica</li>
+                <li>Scrum</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section contact" id="contato" aria-labelledby="contato-titulo">
+        <div class="container">
+          <p class="section-index">05</p>
+          <h2 id="contato-titulo" class="contact-title">Vamos conversar?</h2>
+          <p class="section-lead">O jeito mais rápido de falar comigo é pelo LinkedIn.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="https://www.linkedin.com/in/weslley-de-oliveira-machado-09676b175" rel="noopener">Falar no LinkedIn</a>
+            <a class="button" href="https://github.com/weslley-de-oliveira" rel="noopener">Ver o GitHub</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© <span data-year>2026</span> Weslley de Oliveira Machado</p>
+        <p>Feito à mão, sem framework, publicado no GitHub Pages.</p>
+      </div>
+    </footer>
+  </body>
+</html>
