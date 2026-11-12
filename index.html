@@ -9,9 +9,8 @@
       content="Desenvolvedor Front-end com mais de 4 anos de experiência em Angular, TypeScript e Node.js, ex-líder técnico de front-end e pós-graduando em Engenharia de IA Aplicada."
     />
     <meta name="author" content="Weslley de Oliveira Machado" />
-    <meta name="color-scheme" content="light dark" />
-    <meta name="theme-color" content="#f6f5f1" media="(prefers-color-scheme: light)" />
-    <meta name="theme-color" content="#0e0f12" media="(prefers-color-scheme: dark)" />
+    <meta name="color-scheme" content="dark light" />
+    <meta name="theme-color" content="#0a0a0b" />
 
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="pt_BR" />
@@ -21,7 +20,7 @@
       content="Angular, TypeScript e Node.js. Projetos publicados, com testes, CI e decisões de arquitetura documentadas."
     />
     <meta property="og:url" content="https://weslley-de-oliveira.github.io/" />
-    <meta property="og:image" content="https://weslley-de-oliveira.github.io/assets/img/gf-dashboard.png" />
+    <meta property="og:image" content="https://weslley-de-oliveira.github.io/assets/img/gf-dashboard-escuro.png" />
     <meta name="twitter:card" content="summary_large_image" />
 
     <link rel="canonical" href="https://weslley-de-oliveira.github.io/" />
@@ -31,14 +30,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
     />
     <link rel="stylesheet" href="assets/styles.css" />
 
     <script>
       try {
-        const saved = localStorage.getItem('theme');
-        if (saved === 'light' || saved === 'dark') document.documentElement.dataset.theme = saved;
+        if (localStorage.getItem('theme') === 'light') document.documentElement.dataset.theme = 'light';
       } catch {}
     </script>
     <script src="assets/main.js" defer></script>
@@ -60,7 +58,7 @@
             <li><a href="#contato">Contato</a></li>
           </ul>
         </nav>
-        <button class="theme-toggle" type="button" aria-label="Alternar tema claro e escuro">
+        <button class="theme-toggle" type="button" aria-label="Usar o tema claro">
           <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true">
             <circle cx="12" cy="12" r="4" />
             <path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" />
@@ -74,23 +72,37 @@
 
     <main id="conteudo">
       <section class="hero" id="topo">
-        <div class="container">
-          <p class="eyebrow">João Pessoa, Paraíba · Brasil</p>
-          <h1 class="hero-title">
-            Weslley de Oliveira Machado
-            <span class="hero-role">Desenvolvedor <span class="nowrap">Front-end</span> que <em>cuida do que vem depois do CRUD</em>.</span>
-          </h1>
-          <p class="hero-lead">
-            Mais de 4 anos no ecossistema JavaScript e TypeScript, com foco em Angular (da v5 à v22). Fui líder
-            técnico de front-end por 1 ano e 6 meses e hoje curso a pós-graduação em Engenharia de IA Aplicada.
-            Gosto de regras de negócio difíceis, arquitetura clara e software que se prova com testes.
-          </p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="#projetos">Ver projetos</a>
-            <a class="button" href="https://www.linkedin.com/in/weslley-de-oliveira-machado-09676b175" rel="noopener">LinkedIn</a>
-            <a class="button" href="https://github.com/weslley-de-oliveira" rel="noopener">GitHub</a>
+        <div class="container hero-grid">
+          <div class="hero-text">
+            <p class="eyebrow"><span class="prompt" aria-hidden="true">$</span> whoami</p>
+            <h1 class="hero-title">Weslley de Oliveira <span class="accent">Machado</span></h1>
+            <p class="hero-role">
+              Desenvolvedor <span class="nowrap">Front-end</span>
+              <span class="sep" aria-hidden="true">/</span> Angular
+              <span class="sep" aria-hidden="true">/</span> TypeScript
+              <span class="sep" aria-hidden="true">/</span> Node.js
+            </p>
+            <p class="hero-lead">
+              Construo interfaces em Angular com engenharia de ponta a ponta: da tela ao banco de dados, com testes,
+              segurança e decisões documentadas. São mais de 4 anos no ecossistema JavaScript e TypeScript, 1 ano e 6
+              meses como líder técnico de front-end e uma pós-graduação em Engenharia de IA Aplicada em andamento.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#projetos">Ver projetos</a>
+              <a class="button" href="https://www.linkedin.com/in/weslley-de-oliveira-machado-09676b175" rel="noopener">LinkedIn</a>
+              <a class="button" href="https://github.com/weslley-de-oliveira" rel="noopener">GitHub</a>
+            </div>
           </div>
 
+          <figure class="hero-photo">
+            <div class="photo-frame">
+              <img src="assets/img/weslley.jpg" width="460" height="460" alt="Foto de Weslley de Oliveira Machado" />
+            </div>
+            <figcaption class="photo-tag"><span class="status-dot" aria-hidden="true"></span>João Pessoa, PB · Brasil</figcaption>
+          </figure>
+        </div>
+
+        <div class="container">
           <dl class="stats">
             <div class="stat">
               <dt>Experiência</dt>
@@ -157,18 +169,19 @@
 
             <figure class="shot shot-main">
               <img
-                class="only-light"
-                src="assets/img/gf-dashboard.png"
-                width="1440"
-                height="900"
-                alt="Dashboard da Gestão Financeira com saldo, receitas, despesas, gráfico mensal e transações recentes"
-              />
-              <img
                 class="only-dark"
                 src="assets/img/gf-dashboard-escuro.png"
                 width="1440"
                 height="900"
-                alt="Dashboard da Gestão Financeira no tema escuro"
+                alt="Dashboard da Gestão Financeira no tema escuro, com saldo, receitas, despesas, gráficos e transações recentes"
+              />
+              <img
+                class="only-light"
+                src="assets/img/gf-dashboard.png"
+                width="1440"
+                height="900"
+                loading="lazy"
+                alt="Dashboard da Gestão Financeira no tema claro, com saldo, receitas, despesas, gráficos e transações recentes"
               />
             </figure>
 

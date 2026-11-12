@@ -1,15 +1,18 @@
 const root = document.documentElement;
-const darkQuery = window.matchMedia('(prefers-color-scheme: dark)');
+const toggle = document.querySelector('.theme-toggle');
 
-function currentTheme() {
-  return root.dataset.theme ?? (darkQuery.matches ? 'dark' : 'light');
+function syncToggleLabel() {
+  toggle?.setAttribute('aria-label', root.dataset.theme === 'light' ? 'Usar o tema escuro' : 'Usar o tema claro');
 }
 
-document.querySelector('.theme-toggle')?.addEventListener('click', () => {
-  const next = currentTheme() === 'dark' ? 'light' : 'dark';
-  root.dataset.theme = next;
+syncToggleLabel();
+toggle?.addEventListener('click', () => {
+  const light = root.dataset.theme !== 'light';
+  if (light) root.dataset.theme = 'light';
+  else delete root.dataset.theme;
+  syncToggleLabel();
   try {
-    localStorage.setItem('theme', next);
+    localStorage.setItem('theme', light ? 'light' : 'dark');
   } catch {}
 });
 
